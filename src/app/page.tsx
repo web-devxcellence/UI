@@ -11,8 +11,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <div
         className="relative h-full w-full flex-1 bg-cover bg-center"
-        style={{ backgroundImage: `url(${BgImage.src})` }} // Adjusted to use .src for Next.js image imports
-      >
+        // style={{ backgroundImage: `url(${BgImage.src})` }} // Adjusted to use .src for Next.js image imports
+      > <Image src={BgImage} alt="sdsad fdasds"/>
         <Button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           Partner with us
         </Button>
