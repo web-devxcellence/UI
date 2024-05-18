@@ -1,27 +1,28 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { AntdRegistry } from '@ant-design/nextjs-registry';
-import './globals.css'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/nav/header";
+import Footer from "@/components/nav/footer";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'The complete IT solutions | Agency',
-  description: 'IT SolutionsThe complete IT solutions | Agency',
-}
+  title: "Devexcellence - Software Development Solutions",
+  description: "The complete IT solutions | agency",
+};
 
-export default function Devxcellence({
+export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AntdRegistry>
-          {children}
-        </AntdRegistry>
+      <Header />
+      {children}
+      <Footer />
       </body>
     </html>
-  )
+  );
 }
